@@ -31,8 +31,8 @@ class SyncPostTranslationAddon {
             return; // Exit if the required plugin is not active
         }
 
-        $this->api_key = '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'; // Replace with your actual API key
-        $this->target_domain = 'http://localhost/wordpress/'; // Replace with the target domain
+        $this->api_key = 'Your-API-Key'; // Replace with your actual API key
+        $this->target_domain = 'Target Domain URL'; // Replace with the target domain
 
         add_action('admin_menu', [$this, 'add_translation_menu']);
         add_action('admin_init', [$this, 'register_settings']);
@@ -218,8 +218,8 @@ class SyncPostTranslationAddon {
         $url = $this->target_domain . '/wp-json/wp/v2/posts'; // REST API endpoint of target site
 
         // Replace with the actual application password and username
-        $application_password = 'k0lr 3ZVg bCy1 aOSu vODz bS6S'; 
-        $username = 'admin'; // Username of the user who generated the application password
+        $application_password = 'Target domain Application password'; 
+        $username = 'Target Domain Username'; // Username of the user who generated the application password
 
         $auth = base64_encode($username . ':' . $application_password);
 
